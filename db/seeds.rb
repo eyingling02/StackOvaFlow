@@ -1,3 +1,5 @@
+require "faker"
+
 Question.delete_all
 Answer.delete_all
 
@@ -8,8 +10,8 @@ Answer.delete_all
 end
 
 100.times do
-  Question.create(question: Faker::StarWars.planet,
-    content: Faker::Hipster.paragraph,
+  Question.create(title: Faker::StarWars.planet,
+    question: Faker::Hipster.paragraph,
     user_id: User.all.sample.id
     )
 end
