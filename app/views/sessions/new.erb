@@ -1,4 +1,9 @@
-<<<<<<< HEAD
+
+<h1> L O G I N </h1>
+<% if @error %>
+  <%= @error %>
+<% end %>
+
 <div class="container">
 
   <form action='/sessions/new' method='post'>
@@ -7,21 +12,5 @@
     Password: <input type="password" name="password" placeholder="password"></div>
     <input class="password" type="submit" value="submit">
   </form>
-<!--
-  <% if @error %>
-    <%= @error %>
-  <% end %> -->
+
 </div>
-=======
-<h1> L O G I N </h1>
-<% if @error %>
-  <%= @error %>
-<% end %>
-
-<form action='/sessions/new' method='post'>
-  Email<input type="email" name="email" placeholder="email">
-  Password<input type="password" name="password" placeholder="password">
-  <input type="submit" value="submit">
-</form>
-
->>>>>>> 2ff44017c18372f414e4ed4114a4f4bd035d6709
