@@ -85,3 +85,12 @@ body {
   border-bottom: 3px solid #307d63;
   cursor: pointer;
 }
+.question-container {
+  padding: 20px;
+  width: 70%;
+  border-radius: 7px;
+  text-decoration: center;
+  border: solid;
+  color: black;
+  margin-top: 100px;
+}
