@@ -1,23 +1,14 @@
 get '/users/new' do
+  @user = User.new(params[:user])
   erb :'/users/new'
 end
 
-post '/users/new' do
-  @user = User.new(params)
-  if @user.save
-    login(@user)
-
-    redirect "/users/#{@user.id}"
-  else
-    @error = "Sorry, you entered in some wrong information - please try again."
-    erb :'/users/new'
-  end
+post '/users' do
+  @users = User.create(params[:user])
+  redirect '/users/:id'
 end
 
-get '/users/:id' do
-  if session[:user_id]
-    @user = User.find(session[:user_id])
-  end
-
-  erb :'/users/show'
-end
+# get '/users/:id'
+#   @user = User.find(params[:id])
+#   erb :'/users/show'
+# end
