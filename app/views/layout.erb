@@ -18,13 +18,17 @@
   <title></title>
 </head>
 <body>
-  <div class="layout">
-    <a href="/">Home</a> |
-    <% if session[:user_id] != nil %>
-    <a href="/sessions/logout">Logout</a> |  <a href="/users">Profile</a>
-    <% else %>
-    <a href="/sessions">Login</a> |  <a href="/users/new">Register</a>
+  <div>
+    <ul class="topbar">
+        <li class="list-topbar"><a href="/">Home</a></li>
+      <% if session[:user_id] != nil %>
+        <li class="list-topbar"><a href="/sessions/logout">Logout</a></li>
+        <li class="list-topbar"><a href="/users">Profile</a></li>
+      <% else %>
+        <li class="list-topbar"><a href="/sessions">Login</a></li>
+        <li class="list-topbar"><a href="/users/new">Register</a></li>
     <% end %>
+    </ul>
   </div>
   <%= yield %>
 </body>
