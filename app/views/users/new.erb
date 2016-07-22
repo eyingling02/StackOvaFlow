@@ -1,9 +1,19 @@
-<h1> C R E A T E </h1>
 
-<form action='/users/new' method='post'>
-  First name<input type="text" name="first_name" placeholder="first name">
-  Last name<input type="text" name="last_name" placeholder="last name">
-  Email<input type="email" name="email" placeholder="email">
-  Password<input type="password" name="password" placeholder="password">
-  <input type="submit" value="submit">
-</form>
+<h1> C R E A T E </h1>
+<div class="container">
+  <form action='/users' method='post'>
+    Name: <input type="text" name="name" placeholder="Name">
+    <div class="password">
+    Email: <input type="email" name="email" placeholder="Email">
+    </div>
+    <div class="password">
+    Password: <input type="password" name="password" placeholder="Password">
+    </div>
+    <input class="password" type="submit" value="submit">
+  </form>
+
+  <!-- <%# if @error %>
+    <%#= @error %>
+  <%# end %> -->
+
+</div>

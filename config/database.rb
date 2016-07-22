@@ -6,6 +6,8 @@ end
 # Automatically load every file in APP_ROOT/app/models/*.rb, e.g.,
 #   autoload "Person", 'app/models/person.rb'
 #
+<<<<<<< HEAD
+=======
 # See http://www.rubyinside.com/ruby-techniques-revealed-autoload-1652.html
 #
 Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
@@ -13,6 +15,7 @@ Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
   autoload ActiveSupport::Inflector.camelize(filename), model_file
 end
 
+>>>>>>> 2ff44017c18372f414e4ed4114a4f4bd035d6709
 # We have to do this in case we have models that inherit from each other.
 # If model Student inherits from model Person and app/models/student.rb is
 # required first, it will throw an error saying "Person" is undefined.
@@ -20,6 +23,15 @@ end
 # With this lazy-loading technique, Ruby will try to load app/models/person.rb
 # the first time it sees "Person" and will only throw an exception if
 # that file doesn't define the Person class.
+<<<<<<< HEAD
+#
+# See http://www.rubyinside.com/ruby-techniques-revealed-autoload-1652.html
+Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
+  filename = File.basename(model_file).gsub('.rb', '')
+  autoload ActiveSupport::Inflector.camelize(filename), model_file
+end
+=======
+>>>>>>> 2ff44017c18372f414e4ed4114a4f4bd035d6709
 
 # Heroku controls what database we connect to by setting the DATABASE_URL environment variable
 # We need to respect that if we want our Sinatra apps to run on Heroku without modification
