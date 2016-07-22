@@ -60,21 +60,16 @@ body {
   display: block;
   background: #d1d1d1;
 }
+.wrap input[type="email"] {
+  border-radius: 7px 7px 7px 7px ;
+}
 .wrap input[type="text"] {
-  border-radius: 7px 7px 0px 0px ;
+  border-radius: 7px 7px 7px 7px ;
 }
 .wrap input[type="password"] {
-  border-radius: 0px 0px 7px 7px ;
+  border-radius: 7px 7px 7px 7px ;
 }
-.forgot_link {
-  color: #83afdf ;
-  color: #83afdf;
-  text-decoration: none;
-  font-size: 11px;
-  position: relative;
-  left: 193px;
-  top: -36px;
-}
+
 .wrap .button {
   width: 100%;
   border-radius: 7px;
