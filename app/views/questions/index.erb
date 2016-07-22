@@ -2,9 +2,15 @@
 	<%= @question.question %>
 </div>
 
-
+<ul>
+<div class="question-container">
+  <% @question.answers.each do |answer| %>
+    <li class="answer-list"><%= answer.answer %></li>
+  <% end %>
+</div>
+</ul>
 
 <textarea class="text" name="answer" form="usrform">Enter answer here...</textarea>
-<form action="demo_form.asp" id="usrform">
+<form action="/answers/<%= @question.id %>" id="usrform" method="post">
   <input type="submit">
 </form>
