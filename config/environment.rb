@@ -10,6 +10,7 @@ require 'rubygems'
 
 require 'uri'
 require 'pathname'
+require 'pry-byebug'
 
 
 require 'bcrypt'

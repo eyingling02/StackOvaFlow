@@ -1,19 +1,18 @@
 
 <h1> C R E A T E </h1>
-<div class="container">
-  <form action='/users' method='post'>
-    Name: <input type="text" name="name" placeholder="Name">
-    <div class="password">
-    Email: <input type="email" name="email" placeholder="Email">
-    </div>
-    <div class="password">
-    Password: <input type="password" name="password" placeholder="Password">
-    </div>
-    <input class="password" type="submit" value="submit">
-  </form>
 
-  <!-- <%# if @error %>
-    <%#= @error %>
-  <%# end %> -->
+<div class="wrap">
+<form action='/users/new' method='post'>
+  <input type="text" name="name" placeholder="name" required>
+    <div class="bar">
+      <i></i>
+    </div>
+  <input type="email" name="email" placeholder="email" required>
+    <div class="bar">
+      <i></i>
+    </div>
+  <input type="password" name="password" placeholder="password" required>
+  <input class="button" type="submit" value="Sign Up!">
+</form>
 
 </div>
