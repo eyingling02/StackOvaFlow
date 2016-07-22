@@ -1,3 +1,9 @@
+.text {
+  margin-top: 5%;
+  width: 50%;
+  height: 200px;
+}
+
 .topbar {
     list-style-type: none;
     margin: 0;
@@ -84,4 +90,13 @@ body {
   font-size: 13px;
   border-bottom: 3px solid #307d63;
   cursor: pointer;
+}
+.question-container {
+  padding: 20px;
+  width: 70%;
+  border-radius: 7px;
+  text-decoration: center;
+  border: solid;
+  color: black;
+  margin-top: 100px;
 }

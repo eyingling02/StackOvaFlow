@@ -6,7 +6,7 @@
   <main id="main">
     <% @questions.each do |question| %>
     <!-- <div class="title"> -->
-    <h1><a href="#"><%= question.title %></a></h1>
+    <h1><a href="/questions/<%=question.id%>"><%= question.title %></a></h1>
   <!-- </div>
   <div class="answers"> -->
     <h1><a href="#"><%= question.answers.length %></a></h1>
@@ -19,3 +19,4 @@
     <h1>SIDE BAR</h1>
   </div>
 </div>
+
