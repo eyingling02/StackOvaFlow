@@ -1,14 +1,11 @@
 class User < ActiveRecord::Base
   # Remember to create a migration!
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :name, presence: true
   validates :email, presence: true
   validates :password, presence: true
 
   has_many :questions
   has_many :answers
-
-  include BCrypt
 
   def password
     @password ||= BCrypt::Password.new(password_hash)
