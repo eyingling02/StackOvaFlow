@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates :password, presence: true
 
+  has_many :questions
+  has_many :answers
+
   include BCrypt
 
   def password
