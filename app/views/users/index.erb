@@ -1,8 +1,21 @@
 
 <div class="container">
   <h1>STACK OVAFLOW!</h1>
-  <br>
-  <a href='/sessions/new'>Sign In</a>
-  <br><br>
-  <a href='/users/new'>New User</a>
+
+  <h2> H O M E </h2>
+  <main id="main">
+    <% @questions.each do |question| %>
+    <!-- <div class="title"> -->
+    <h1><a href="#"><%= question.title %></a></h1>
+  <!-- </div>
+  <div class="answers"> -->
+    <h1><a href="#"><%= question.answers.length %></a></h1>
+    <p>answers</p>
+    <!-- </div> -->
+    <% end %>
+  </main>
+
+  <div class="sidebar">
+    <h1>SIDE BAR</h1>
+  </div>
 </div>
