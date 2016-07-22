@@ -11,6 +11,10 @@ require 'rubygems'
 require 'uri'
 require 'pathname'
 
+<<<<<<< HEAD
+=======
+require 'bcrypt'
+>>>>>>> 2ff44017c18372f414e4ed4114a4f4bd035d6709
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -20,14 +24,18 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+<<<<<<< HEAD
 require 'faker' if development?
 require 'bcrypt'
 
+=======
+>>>>>>> 2ff44017c18372f414e4ed4114a4f4bd035d6709
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
 
+<<<<<<< HEAD
 configure do
   # By default, Sinatra assumes that the root is the file that calls the configure block.
   # Since this is not the case for us, we set it manually.
@@ -40,6 +48,8 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
+=======
+>>>>>>> 2ff44017c18372f414e4ed4114a4f4bd035d6709
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
