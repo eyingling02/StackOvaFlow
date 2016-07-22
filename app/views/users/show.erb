@@ -1,5 +1,18 @@
-<div>
-hello <%= @user.name %>
+<br><br>
+<center>
+Welcome <%= @user.name.upcase %>!
+</center>
+<br>
+
+<center>
+<div id="user page">
+<% @user.questions.each do |question| %>
+<a href="#"><%= question.title %></a>
+<br>
+<%= p question.question %>
+<br><br>
+  <% end %>
 
 
 </div>
+</center>
